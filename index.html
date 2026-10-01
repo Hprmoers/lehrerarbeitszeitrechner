@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gemeinsam sind wir blöd – Präsentation</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --dark:#1A2332;
+  --red:#E63946;
+  --green:#06D6A0;
+  --yellow:#FFD166;
+  --light:#F8F9FA;
+  --white:#FFFFFF;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:"Open Sans",system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;
+  color:var(--dark);
+  background:#fff;
+  line-height:1.4;
+}
+.wrapper{
+  max-width:1200px;
+  margin:0 auto;
+  padding:24px;
+}
+.slide{
+  border:1px solid #e6e9ef;
+  border-radius:16px;
+  padding:48px;
+  margin:28px auto;
+  background:#fff;
+  box-shadow:0 2px 10px rgba(0,0,0,0.04);
+}
+.slide h1,.slide h2,.slide h3{
+  font-family:"Montserrat",sans-serif;
+  margin:0 0 12px 0;
+  line-height:1.15;
+}
+.title{
+  background:var(--dark);
+  color:#fff;
+  text-align:center;
+  padding:80px 48px;
+}
+.title h1{
+  font-size:56px;
+  color:var(--red);
+  font-weight:800;
+  letter-spacing:0.5px;
+}
+.title p{
+  font-size:22px;
+  opacity:.95;
+}
+.kicker{
+  font-size:28px;
+  color:#fff;
+  margin-top:18px;
+}
+.meta{
+  margin-top:28px;
+  font-size:16px;
+  color:#cfd6df;
+}
+
+.center{
+  text-align:center;
+}
+.big-red{
+  color:var(--red);
+  font-size:88px;
+  font-weight:800;
+}
+.big-green{
+  color:var(--green);
+  font-size:64px;
+  font-weight:800;
+}
+.big-dark{
+  color:var(--dark);
+  font-size:72px;
+  font-weight:800;
+}
+.sub{
+  font-size:28px;
+  color:var(--dark);
+  opacity:.9;
+}
+
+.twocol{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:32px;
+}
+.badge{
+  display:inline-block;
+  background:var(--red);
+  color:#fff;
+  border-radius:999px;
+  padding:6px 14px;
+  font-weight:600;
+  font-size:14px;
+  letter-spacing:.3px;
+  text-transform:uppercase;
+}
+.badge.green{background:var(--green)}
+.badge.dark{background:var(--dark)}
+.hr{
+  height:1px;background:#e9ecf2;margin:24px 0;
+}
+.list{
+  font-size:24px;
+  margin:0;
+  padding-left:0;
+  list-style:none;
+}
+.list li{margin:10px 0}
+.callout{
+  border-left:6px solid var(--red);
+  background:#fff7f8;
+  padding:18px 20px;
+  border-radius:8px;
+  font-size:22px;
+}
+.callout.green{
+  border-left-color:var(--green);
+  background:#f3fff9;
+}
+.block{
+  background:var(--light);
+  border-radius:14px;
+  padding:24px;
+}
+.quote{
+  font-size:26px;
+  font-style:italic;
+  color:#3a4760;
+}
+.highlight{
+  color:var(--red);
+  font-weight:800;
+}
+.small{font-size:16px;opacity:.7}
+
+.grid-steps{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+.step{
+  border:1px dashed #d9dee7;
+  border-radius:12px;
+  padding:18px;
+  background:#fff;
+}
+.step h3{
+  font-size:22px;margin-bottom:8px
+}
+.pill{
+  display:inline-block;background:#eef2f7;border-radius:999px;padding:6px 10px;font-size:14px;color:#51607a
+}
+.kv{
+  display:flex;gap:16px;align-items:flex-start
+}
+.kv .key{
+  min-width:120px;font-weight:700;color:#2b364a
+}
+.kv .val{flex:1}
+
+.trenner{
+  background:var(--red);
+  color:#fff;
+  text-align:center;
+}
+.trenner.green{background:var(--green)}
+.trenner h2{
+  font-size:44px;margin:0 0 6px 0
+}
+.trenner .sub{
+  color:#fff;opacity:.95
+}
+
+.note{
+  background:#fffde7;border:1px solid #ffe18a;border-radius:12px;padding:16px;font-size:18px
+}
+
+/* Responsive */
+@media (max-width:900px){
+  .twocol{grid-template-columns:1fr}
+  .grid-steps{grid-template-columns:1fr}
+  .title h1{font-size:40px}
+  .big-red{font-size:60px}
+  .big-dark{font-size:50px}
+}
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- Folie 1: Titelfolie -->
+  <section class="slide title">
+    <h1>GEMEINSAM SIND WIR BLÖD</h1>
+    <p class="kicker">Warum Teamarbeit uns dümmer macht – und was wir dagegen tun können</p>
+    <p class="meta">[Dein Name] • [Schule] • [Datum]</p>
+  </section>
+
+  <!-- Folie 2: Provokation -->
+  <section class="slide center">
+    <div class="big-red">GEMEINSAM SIND<br>WIR BLÖD</div>
+  </section>
+
+  <!-- Folie 3: Gunter Dueck -->
+  <section class="slide">
+    <div class="twocol">
+      <div class="block center">
+        <div style="font-size:120px;line-height:1">📘</div>
+        <div class="small" style="margin-top:8px">Platz für Buchcover “Gemeinsam sind wir blöd”</div>
+      </div>
+      <div>
+        <span class="badge dark">Herkunft</span>
+        <h2>„Gemeinsam sind wir blöd“</h2>
+        <p class="sub">Gunter Dueck – Mathematiker, ehemaliger IBM-Manager, Autor</p>
+        <div class="hr"></div>
+        <p class="quote">Organisationen produzieren systematisch Dummheit – nicht weil Menschen dumm sind, sondern weil Prozesse, Hierarchien und Gruppendynamiken intelligente Menschen dümmer machen.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Folie 4: Persönliche Story -->
+  <section class="slide">
+    <div class="twocol">
+      <div>
+        <ul class="list">
+          <li>👥 20 kluge Menschen</li>
+          <li>⏱️ 2 Stunden Diskussion</li>
+          <li>❌ 0 Ergebnisse</li>
+        </ul>
+      </div>
+      <div class="callout">
+        = <span class="highlight">Gemeinsam blöd</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Folie 5: Warum -->
+  <section class="slide center">
+    <div class="big-dark">WARUM?</div>
+    <p class="sub">Warum scheitern intelligente Menschen, sobald sie zusammenkommen?</p>
+  </section>
+
+  <!-- Folie 6: Gehirn -->
+  <section class="slide center">
+    <div style="font-size:120px;line-height:1">🧠</div>
+    <p class="sub">20% unserer Energie • 1,5 kg Gewicht</p>
+    <div class="callout" style="display:inline-block;margin-top:10px">
+      = Energiesparen ist überlebenswichtig
+    </div>
+  </section>
+
+  <!-- Trenner TEIL 1 -->
+  <section class="slide trenner">
+    <h2>TEIL 1</h2>
+    <div class="sub">Warum wir gemeinsam blöd sind</div>
+  </section>
+
+  <!-- Folien 8-10: Brainstorming-Krise -->
+  <section class="slide">
+    <span class="badge">Brainstorming-Krise</span>
+    <h2>1952 • Yale University</h2>
+    <div class="twocol">
+      <div class="block center">
+        <div style="font-size:40px">👥👥👥👥👥</div>
+        <div class="sub">Gemeinsam denken</div>
+      </div>
+      <div class="block center">
+        <div style="font-size:40px">👤 👤 👤 👤 👤</div>
+        <div class="sub">Alleine denken</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide center">
+    <div class="big-red">80%<br>WENIGER IDEEN</div>
+    <p class="sub">(und die Ideen waren schlechter)</p>
+  </section>
+
+  <section class="slide">
+    <h2>70 Jahre Forschung – ignoriert</h2>
+    <ul class="list">
+      <li>• Hunderte Studien mit ähnlichem Befund</li>
+      <li>• Trotzdem sagen wir: „Lasst uns brainstormen!“</li>
+    </ul>
+    <div style="font-size:60px;margin-top:10px">🤦</div>
+  </section>
+
+  <!-- Folien 11-15: Restaurant-Paradox -->
+  <section class="slide">
+    <span class="badge">Social Proof</span>
+    <h2>Rom, 12:30 Uhr</h2>
+    <div class="twocol">
+      <div class="block center">
+        <div style="font-size:60px">🏪</div>
+        <div style="font-size:24px">😊😊😊😊😊</div>
+        <div class="sub">VOLL</div>
+      </div>
+      <div class="block center">
+        <div style="font-size:60px">🏪</div>
+        <div class="sub">LEER</div>
+      </div>
+    </div>
+    <div class="hr"></div>
+    <p class="sub center">Wo gehen Sie hin?</p>
+  </section>
+
+  <section class="slide center">
+    <h2>11:30 Uhr – beide leer</h2>
+    <p class="sub">Sie setzen sich ins erste – der Rest folgt nacheinander.</p>
+    <div class="block">
+      <div>11:35  →  👤</div>
+      <div>11:45  →  👤👤</div>
+      <div>12:00  →  👤👤👤👤👤</div>
+      <div>12:30  →  👥👥👥👥👥 …</div>
+    </div>
+  </section>
+
+  <section class="slide center">
+    <div class="big-red">NIEMAND WUSSTE ETWAS</div>
+    <p class="sub">Der Erste war nur müde. Der Rest folgte blind. 🐑</p>
+  </section>
+
+  <section class="slide">
+    <h2>Übertragung: Restaurant → Konferenz</h2>
+    <div class="callout">
+      „Wir brauchen mehr Entlastungsstunden“<br>
+      ↓ Alle nicken<br>
+      <b>Nicht weil es stimmt. Sondern weil schon jemand nickt.</b>
+    </div>
+  </section>
+
+  <section class="slide center">
+    <div class="big-red">GEMEINSAM SIND WIR BLÖD</div>
+    <p class="sub">Wir folgen, statt zu denken</p>
+  </section>
+
+  <!-- Folien 17-19: Autoritäts-Bias -->
+  <section class="slide">
+    <span class="badge">Autoritäts-Bias</span>
+    <h2>Die Ampel-Studie</h2>
+    <div class="block">
+      <div class="kv">
+        <div class="key">🚦 Person in Jeans</div>
+        <div class="val">≈ 20% folgen</div>
+      </div>
+      <div class="kv">
+        <div class="key">🚦 Person im Anzug</div>
+        <div class="val">≈ 40% folgen</div>
+      </div>
+    </div>
+    <div class="callout" style="margin-top:14px">
+      +20% nur wegen Kleidung – nicht wegen Qualität der Entscheidung
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>Steinzeit-Gehirn, moderne Konferenz</h2>
+    <div class="quote">„Folge dem Häuptling, sonst wirst du aus dem Stamm geworfen.“</div>
+    <div class="hr"></div>
+    <p class="sub"><b>Heute:</b> Wenn die Schulleitung zuerst spricht, folgt die Gruppe – Argumente verlieren.</p>
+  </section>
+
+  <section class="slide center">
+    <div class="big-red">GEMEINSAM SIND WIR BLÖD</div>
+    <p class="sub">Wir folgen Autorität, nicht Argumenten</p>
+  </section>
+
+  <!-- Trenner TEIL 2 -->
+  <section class="slide trenner green">
+    <h2>TEIL 2</h2>
+    <div class="sub">Wie wir gemeinsam klug werden</div>
+  </section>
+
+  <!-- Folie 21: Wendepunkt -->
+  <section class="slide center">
+    <div class="big-dark">Wir sind nicht blöd.</div>
+    <div class="big-red" style="font-size:56px">Unser PROZESS ist blöd.</div>
+    <div style="font-size:56px;margin-top:8px">⚙️🔧</div>
+  </section>
+
+  <!-- Folien 22-26: Stille-Revolution -->
+  <section class="slide center">
+    <div class="sub">Die beste Teamarbeit beginnt mit…</div>
+    <div class="big-green">SCHWEIGEN 🤫</div>
+  </section>
+
+  <section class="slide">
+    <span class="badge green">Silent Brainstorming</span>
+    <h2>Schritt 1: Information ohne Meinung</h2>
+    <div class="callout green">
+      „Hier sind die Daten.“ – keine Lösung, noch nicht.
+    </div>
+    <p class="small" style="margin-top:10px">Neutraler Start reduziert Priming- und Autoritäts-Effekte.</p>
+  </section>
+
+  <section class="slide">
+    <h2>Schritt 2: 7 Minuten Stille</h2>
+    <div class="block center">
+      <div style="font-size:72px">🕒 07:00</div>
+      <div class="sub">Jede Person schreibt einzeln: Belastungen • Hilfen • Erster kleiner Schritt</div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>Schritt 3: Ideen sichtbar machen</h2>
+    <div class="grid-steps">
+      <div class="step">
+        <h3>Post-its an die Wand</h3>
+        <p class="small">Ohne Namen, ohne Titel – nur Ideen</p>
+      </div>
+      <div class="step">
+        <h3>Cluster bilden</h3>
+        <p class="small">Gemeinsam sortieren, nicht bewerten</p>
+      </div>
+      <div class="step">
+        <h3>Kategorien benennen</h3>
+        <p class="small">z.B. Vorbereitung, Korrekturen, Konferenzen, Elternarbeit</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>Transformation</h2>
+    <div class="twocol">
+      <div class="block center">
+        <div class="badge">Vorher</div>
+        <p>Laute Diskussion • „Ja, aber…“ • Lauteste gewinnt</p>
+      </div>
+      <div class="block center">
+        <div class="badge green">Nachher</div>
+        <p>Stille Sammlung • Kategorisieren • Beste Ideen gewinnen</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Folien 27-29: Ja, aber → Ja, und -->
+  <section class="slide">
+    <h2>Von „Ja, aber…“ zu „Ja, und…“</h2>
+    <div class="twocol">
+      <div class="callout">„Ja, aber…“ = Ich weiß es besser als du</div>
+      <div class="callout green">„Deine Idee gehört zu meiner.“ = Wir sind im gleichen Team</div>
+    </div>
+  </section>
+
+  <section class="slide center">
+    <div class="big-green">GEMEINSAM SIND WIR KLUG</div>
+    <p class="sub">Wenn wir erst denken, dann reden</p>
+  </section>
+
+  <!-- Folien 30-33: Hangry Judge -->
+  <section class="slide">
+    <span class="badge">Bias in Entscheidungen</span>
+    <h2>Israel, 2012 – Richter und Begnadigungen</h2>
+    <ul class="list">
+      <li>09:00 Uhr: ≈ 65% Begnadigungen</li>
+      <li>11:45 Uhr: ≈ 0,0% Begnadigungen</li>
+    </ul>
+    <div class="callout">Profis. Ausgebildet, neutral zu sein. Trotzdem: Hunger kippt Entscheidungen.</div>
+  </section>
+
+  <section class="slide">
+    <h2>Die Lektion</h2>
+    <div class="block">
+      <p>Wenn <b>Richter</b> nicht neutral bleiben können – wie sollen <b>wir</b> es schaffen?</p>
+      <div class="hr"></div>
+      <p><b>Antwort:</b> Wir können es nicht. Aber wir können Strukturen schaffen, die uns helfen.</p>
+    </div>
+    <div class="note" style="margin-top:12px">
+      Entscheidet nie über Arbeitszeit:
+      <ul>
+        <li>❌ in der 6. Stunde</li>
+        <li>❌ kurz vor Feierabend</li>
+        <li>❌ wenn die Hälfte fehlt</li>
+      </ul>
+      Sonst: gemeinsam blöd.
+    </div>
+  </section>
+
+  <!-- Folien 34-37: Drei Schritte -->
+  <section class="slide center">
+    <div class="big-green" style="font-size:48px">Drei Dinge für morgen</div>
+    <ul class="list" style="display:inline-block;text-align:left">
+      <li>1) Wer sollte <b>nicht</b> alleine entscheiden?</li>
+      <li>2) 7 Minuten Stille vor jeder wichtigen Entscheidung</li>
+      <li>3) Fragen: „Was testen wir diese Woche?“</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>1) Wer sollte NICHT entscheiden?</h2>
+    <div class="callout">Nicht weil sie inkompetent sind – sondern weil <b>allen</b> Informationen fehlen (auch der Schulleitung).</div>
+  </section>
+
+  <section class="slide">
+    <h2>2) 7 Minuten Stille</h2>
+    <p class="sub">Vor jeder wichtigen Entscheidung: jeder schreibt – <b>dann</b> erst reden.</p>
+  </section>
+
+  <section class="slide">
+    <h2>3) Iteration statt Rechthaberei</h2>
+    <div class="callout green">
+      Nicht: „Was ist <u>die</u> Lösung?“<br>
+      Sondern: „Was testen wir <b>diese Woche</b>?“<br>
+      → Fortschritt statt Perfektion
+    </div>
+  </section>
+
+  <!-- Folien 38-41: Vision -->
+  <section class="slide">
+    <span class="badge">Vision</span>
+    <h2>Vorher</h2>
+    <div class="block">
+      20 Menschen • 2 Stunden • 0 Ergebnisse
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>Nachher</h2>
+    <div class="block">
+      7 Minuten Stille • 50 Ideen • 5 Kategorien • 30 Minuten gesamt
+    </div>
+  </section>
+
+  <section class="slide center">
+    <div class="big-red" style="text-decoration:line-through">GEMEINSAM SIND WIR BLÖD</div>
+    <div class="big-green">GEMEINSAM SIND WIR BRILLANT</div>
+  </section>
+
+  <section class="slide center">
+    <div class="sub">Die nächste Konferenz?</div>
+    <div class="big-dark" style="font-size:44px">Bringen Sie Post-its. Stille. Mut.</div>
+    <div class="big-green" style="font-size:44px;margin-top:8px">Und werden Sie gemeinsam brillant.</div>
+  </section>
+
+  <!-- Folie 42: Danke -->
+  <section class="slide center">
+    <div class="big-green" style="font-size:60px">DANKE</div>
+    <p class="sub">Fragen?</p>
+    <p class="small">[Dein Name] • [E-Mail] • [Optional: QR-Code zu Ressourcen]</p>
+  </section>
+
+  <!-- Bonus: Quellen/Herkunft -->
+  <section class="slide">
+    <span class="badge dark">Herkunft & Referenzen</span>
+    <ul class="list">
+      <li>„Gemeinsam sind wir blöd“ – Buch von Gunter Dueck (Herkunft des Leitsatzes)</li>
+      <li>Fritz Seidl – Gespräch über Denkverzerrungen, Teamarbeit, Iteration</li>
+      <li>Brainstorming-Forschung (ab 1950er), diverse Replikationen</li>
+      <li>„Hangry Judge“-Studie: Tageszeit/Hunger beeinflusst richterliche Entscheidungen</li>
+    </ul>
+    <p class="small">Hinweis: In der Live-Version bitte konkrete Quellenangaben/Links ergänzen.</p>
+  </section>
+
+</div>
+</body>
+</html>
